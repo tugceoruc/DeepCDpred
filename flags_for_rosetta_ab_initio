@@ -1,0 +1,23 @@
+-in:file:fasta PATH_TO_QUERY_SEQUENCE_FILE 
+-in:file:frag3 PATH_TO_THREE_RESIDUE_FRAGMENTS_FIE
+-in:file:frag9 PATH_TO_NINE_RESIDUE_FRAGMENTS_FILE
+
+-abinitio:relax
+-nstruct 100
+
+-out:pdb
+-out:overwrite
+
+-database PATH_TO_ROSETTA_DATABASE_DIRECTORY
+
+-cst_fa_file PATH_TO_CONSTRAINT_FILE
+-use_filters true
+-psipred_ss2 PATH_TO_SECONDARY_STRUCTURE_PREDICTION_FILE
+-abinitio::increase_cycles 20
+-abinitio::rg_reweight 0.5
+-abinitio::rsd_wt_helix 0.5
+-abinitio::rsd_wt_loop 0.5
+
+-constraints:cst_weight 0.5
+-constraints:cst_fa_weight 0.5
+
